@@ -1,0 +1,249 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Decision of the buyer
+{% endblock %}
+
+{% block content %}
+
+    <p>You were assigned to the role of buyer. Remember that you will keep this role during the 5 trading rounds.
+        You will be able to buy only one package per trading round. The computer will give you a "value" for each of the
+        packages you will find for sale in the market. This value represents how much you value that package if you were
+        to close a transaction. In total there are 5 types of tourist packages whose only difference will be the
+        destination: Bahamas, Jamaica, Cuba, Hawaii and Palau. You will only receive five values, one for each package.</p>
+
+    <p>Please note that the values are private, i.e. only you know this numbers. Neither the other buyers nor the
+        sellers know this information.</p>
+
+    <p>You will be shown a list of all package offers in the market and their respective prices. To close a transaction,
+        you must select one and only one of the packages in the market. Your earnings will be calculated as the
+        difference between your valuation and the price at which you purchased the package. If you fail to complete a
+        transaction, you won’t make any profit. </p>
+
+    <p>Think of it this way, suppose you have the ability to resell each of the five packages in question, and if you
+        manage to get one, you will earn the difference. The value is what you would receive when you resell the
+        package. If the value is 7 ECU and you manage to get the package at a price of 5 ECU, then your profit would be
+        2 ECU. If you do not succeed in buying the package, your profit would be zero, i.e. you would not pay any price
+        and would not receive any income.</p>
+
+    <p>Let's see another example:</p>
+
+    <p>Suppose that the value for the package you decide to buy is 5 ECU and you manage to buy the package at a price
+        of 3 ECU. You will then earn 5 ECU - 3 ECU = 2 ECU. If you fail to close a transaction, you will incur no cost
+        or profit, i.e. your profit will be 0 ECU.</p>
+
+    <p>It is important to note that two buyers can select the same offer but only one of them will complete the
+        transaction. The one who makes the decision to buy the package the fastest will be the one who completes the
+        transaction.</p>
+
+    <p>----> Conditional on the treatment, read the following statements <----</p>
+
+    <p>----> Conditionally on: Commercial Practice Treatment <----</p>
+
+    <p>Additionally, notice that the sellers can choose a commercial practice to help make their packages more
+        attractive in the market. There are three commercial practices and if a seller uses them, they will be visible
+        to the buyer at the time of completing the transaction. However, keep in mind that any of these commercial
+        practices can be used truthfully or untruthfully.</p>
+
+    <p>----> Conditionally on: Informal Sanction Treatment <----</p>
+
+    <p>In the end, the buyers will be able to report a seller if they think he/she used the practice untruthfully. If at
+        least 3 buyers report that a specific seller used any business practice untruthfully, that seller will have to
+        pay a fine. This fine will be 0.6 ECU plus 0.2 ECU for each additional buyer who reports it. The amount of the
+        fine will be divided equally among the buyers who reported the seller.</p>
+
+    <p>----> Conditional Start: Formal Sanction Treatment <----</p>
+
+    <p>In the end, we will audit two of the sellers randomly, i.e. the probability of being audited is 20%. If an
+        audited seller is using some commercial practice untruthfully, the seller must pay 2 ECU as a fine. These 2 ECU
+        will be distributed among the buyers.</p>
+
+    <p>----> Conditional Start: Regret Treatment <----</p>
+
+    <p>Please note that buyers will be given information about the price of the package they want to purchase before
+        completing the transaction. If the price of the package is above the average, a message will appear with a sad
+        emoticon indicating that. If, on the other hand, the price of the package is lower than or equal to the average,
+        a happy emoticon will appear indicating that.</p>
+
+    <p>----> End Conditional Text <----</p>
+
+    <p>----> Conditional on the treatment, read the following statements <----</p>
+
+    <p>----> Conditional Start: All treatment but control <----</p>
+
+    <p>There are three commercial practices available that buyers will be able to use to make their package more
+        attractive to the market.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Commercial Practice</th>
+                <th scope="col">Definition</th>
+                <th scope="col">Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Best Price Guarantee</th>
+                <td>This commercial practice allows you to make the announcement that, among all packages with the same
+                    destination, this one has the lowest price.</td>
+                <td>Suppose you offer the package to Palau. There may be other sellers in the market selling the same
+                    package to Palau, but if you opt for this commercial practice, you would be saying that, of all the
+                    packages to Palau, yours is the cheapest.</td>
+            </tr>
+            <tr>
+                <th scope="row">Reference Pricing</th>
+                <td>This commercial practice allows you to make the announcement that between the first price you
+                    proposed and the end, you offered a discount.</td>
+                <td>Suppose you offer a package to Palau. You can claim that you made a discount between the first price
+                    you bid of 6 EMU and the final (the one you confirmed after deciding whether or not to observe the
+                    competition)</td>
+            </tr>
+            <tr>
+                <th scope="row">Drip pricing</th>
+                <td>This commercial practice allows you to display a price for the package you are bidding that is less
+                    than the total price you are asking for it. The difference between the actual price and the price
+                    you are displaying is equal to the cost for viewing the full list of packages (0.2 EMU), regardless
+                    of whether you decided to pay this cost or not.</td>
+                <td>Suppose you offer a package to Palau and the price you claim for this package is 8 UME. If you
+                    decide to use this commercial practice, your offer will appear with a price of 7.8* UME, with a note
+                    indicating the total price.</td>
+        </tbody>
+    </table>
+
+    <p>Notice that these commercial practices can be used truthfully (case 1) or untruthfully (case 2). Using the
+        examples in the table above, in the following table you will find each of the commercial practices and the
+        examples for case 1 and case 2.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Commercial Practice</th>
+                <th scope="col">Case 1 (truthful)</th>
+                <th scope="col">Case 2 (untruthful)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Best Price Guarantee</th>
+                <td>1) When there is no other package to Palau. 2) When there exists at least another package to Palau
+                    and the latter has a larger price.</td>
+                <td>1) When there exists at least another package to Palau and the latter has a smaller price.</td>
+            </tr>
+            <tr>
+                <th scope="row">Reference Pricing</th>
+                <td>1) Use of the real discount.</td>
+                <td>1) Use of the real discount plus 2 UME</td>
+            </tr>
+            <tr>
+                <th scope="row">Drip pricing</th>
+                <td>1) When the seller shows the Price minus the cost to see the first offer of the other sellers.</td>
+                <td>1) When the seller decides not to see the prices of the competitors but still show the price net of this cost</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Remember that it is the seller’s decision whether or not to use any of these business practices.</p>
+
+    <p>In the table below you can see what a bid would look like in the list of bids with each of the business practices
+        whether the seller decided to use one of them.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Commercial Practice</th>
+                <th scope="col">Chosen</th>
+                <th scope="col">Unchosen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Best Price Guarantee</th>
+                <td>
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <h3 class="card-header">Palau</h3>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">8 ECU</h5>
+                            <br>
+                            <br>
+                            <hr class="my-4">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <h3 class="card-header">Palau</h3>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">8 ECU</h5>
+                            <br>
+                            <p class="card-text">Best price guaranteed</p>
+                            <hr class="my-4">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Reference Pricing</th>
+                <td>
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <h3 class="card-header">Palau</h3>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">8 ECU</h5>
+                            <br>
+                            <br>
+                            <hr class="my-4">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <h3 class="card-header">Palau</h3>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title"><del> 10 ECU </del></h5>
+                            <h5 class="card-title">8 ECU</h5>
+                            <br>
+                            <hr class="my-4">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Drip pricing</th>
+                <td>
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <h3 class="card-header">Palau</h3>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">8 ECU</h5>
+                            <br>
+                            <br>
+                            <hr class="my-4">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <h3 class="card-header">Palau</h3>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title"> 8 ECU*</h5>
+                            <br>
+                            <br>
+                            <hr class="my-4">
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Buy</a>
+                        </div>
+                    </div>
+                </td>
+        </tbody>
+    </table>
+
+    <p>Please click on the "Next" button to know your private valuations of each of the packages, to see the list of
+        offers, and to select at least one.</p>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+
+{% endblock %}

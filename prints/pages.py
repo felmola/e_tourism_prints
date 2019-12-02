@@ -24,4 +24,10 @@ class p5_seller_list(Page):
     form_model = "player"
     form_fields = ["id_number"]
 
-page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision, p5_seller_list]
+class p6_buyer_intro(Page):
+    pass
+
+class p7_buyer_decision(Page):
+    pass
+
+page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision, p5_seller_list, p6_buyer_intro, p7_buyer_decision]
