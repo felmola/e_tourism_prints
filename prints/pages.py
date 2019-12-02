@@ -19,4 +19,9 @@ class p4_seller_decision(Page):
     form_model = "player"
     form_fields = ["id_number"]
 
-page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision]
+class p5_seller_list(Page):
+
+    form_model = "player"
+    form_fields = ["id_number"]
+
+page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision, p5_seller_list]
