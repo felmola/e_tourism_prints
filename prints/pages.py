@@ -3,17 +3,20 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
-class MyPage(Page):
+class p1_consent(Page):
+
+    form_model = "player"
+    form_fields = ["nombre", "id_number"]
+
+class p2_intro(Page):
     pass
 
-
-class ResultsWaitPage(WaitPage):
-    def after_all_players_arrive(self):
-        pass
-
-
-class Results(Page):
+class p3_seller_intro(Page):
     pass
 
+class p4_seller_decision(Page):
 
-page_sequence = [MyPage, ResultsWaitPage, Results]
+    form_model = "player"
+    form_fields = ["id_number"]
+
+page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision]

@@ -1,0 +1,163 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Decision of the seller
+{% endblock %}
+
+{% block content %}
+
+
+    <p>The package you are going to sell is [Package]. The cost of this package is [Cost].</p>
+
+    <p>Please set the price at which you want to sell this package in the following box:</p>
+
+    <div class="form-inline"> {{ form.id_number }} &nbsp; ECU </div>
+
+    <p>Remember that for you to make a profit you must sell the package at a higher price at this cost.</p>
+
+    <p>Would you like to see the complete list of offers in the package market, including prices? This action will cost
+        you 0.2 ECU </p>
+
+    <div class="radio">
+        <label><input type="radio" name="optradio" checked>Yes</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="optradio">No</label>
+    </div>
+
+    <p>----> Conditional on the treatment, read the following statements <----</p>
+
+    <p>----> ----> Conditional Start: All treatment but control <---- <----</p>
+
+    <p>Additionally, you can choose a commercial practice to help make your package more attractive in the market.</p>
+
+    <p>There are three commercial practices available that buyers will be able to use to make their package more
+        attractive to the market.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Commercial Practice</th>
+                <th scope="col">Definition</th>
+                <th scope="col">Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Best Price Guarantee</th>
+                <td>This commercial practice allows you to make the announcement that, among all packages with the same
+                    destination, this one has the lowest price.</td>
+                <td>Suppose you offer the package to Palau. There may be other sellers in the market selling the same
+                    package to Palau, but if you opt for this commercial practice, you would be saying that, of all the
+                    packages to Palau, yours is the cheapest.</td>
+            </tr>
+            <tr>
+                <th scope="row">Reference Pricing</th>
+                <td>This commercial practice allows you to make the announcement that between the first price you
+                    proposed and the end, you offered a discount.</td>
+                <td>Suppose you offer a package to Palau. You can claim that you made a discount between the first price
+                    you bid of 6 EMU and the final (the one you confirmed after deciding whether or not to observe the
+                    competition)</td>
+            </tr>
+            <tr>
+                <th scope="row">Drip pricing</th>
+                <td>This commercial practice allows you to display a price for the package you are bidding that is less
+                    than the total price you are asking for it. The difference between the actual price and the price
+                    you are displaying is equal to the cost for viewing the full list of packages (0.2 EMU), regardless
+                    of whether you decided to pay this cost or not.</td>
+                <td>Suppose you offer a package to Palau and the price you claim for this package is 8 UME. If you
+                    decide to use this commercial practice, your offer will appear with a price of 7.8* UME, with a note
+                    indicating the total price.</td>
+        </tbody>
+    </table>
+
+    <p>Notice that these commercial practices can be used truthfully (case 1) or untruthfully (case 2). Using the
+        examples in the table above, in the following table you will find each of the commercial practices and the
+        examples for case 1 and case 2.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Commercial Practice</th>
+                <th scope="col">Case 1 (truthful)</th>
+                <th scope="col">Case 2 (untruthful)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Best Price Guarantee</th>
+                <td>1) When there is no other package to Palau. 2) When there exists at least another package to Palau
+                    and the latter has a larger price.</td>
+                <td>1) When there exists at least another package to Palau and the latter has a smaller price.</td>
+            </tr>
+            <tr>
+                <th scope="row">Reference Pricing</th>
+                <td>1) Use of the real discount.</td>
+                <td>1) Use of the real discount plus 2 UME</td>
+            </tr>
+            <tr>
+                <th scope="row">Drip pricing</th>
+                <td>1) When the seller shows the Price minus the cost to see the first offer of the other sellers.</td>
+                <td>1) When the seller decides not to see the prices of the competitors but still show the price net of this cost</td>
+        </tbody>
+    </table>
+
+    <p>Remember that it is your decision whether or not to use any of these business practices.</p>
+
+    <p>In the table below you can see what your bid would look like in the list of bids with each of the business
+        practices if you decided to use one of them.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Commercial Practice</th>
+                <th scope="col">Chosen</th>
+                <th scope="col">Unchosen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Best Price Guarantee</th>
+                <td>
+                    <div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+                </td>
+                <td>
+                    <div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Reference Pricing</th>
+                <td>Mockup</td>
+                <td>Mockup</td>
+            </tr>
+            <tr>
+                <th scope="row">Drip pricing</th>
+                <td>Mockup</td>
+                <td>Mockup</td>
+        </tbody>
+    </table>
+
+
+
+
+    <p>----> XXXX <----</p>
+    <p>----> XXXX <----</p>
+    <p>----> XXXX <----</p>
+
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+
+{% endblock %}

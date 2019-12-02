@@ -32,4 +32,6 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+
+    nombre = models.StringField()
+    id_number = models.IntegerField()
