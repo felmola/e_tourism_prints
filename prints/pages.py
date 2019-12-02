@@ -30,4 +30,9 @@ class p6_buyer_intro(Page):
 class p7_buyer_decision(Page):
     pass
 
-page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision, p5_seller_list, p6_buyer_intro, p7_buyer_decision]
+class p8_buyer_sanction(Page):
+    pass
+
+
+page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision, p5_seller_list,
+                 p6_buyer_intro, p7_buyer_decision, p8_buyer_sanction]
