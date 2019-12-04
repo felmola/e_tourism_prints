@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results of trading period
+{% endblock %}
+
+{% block content %}
+
+
+    <p>Your results for this trading round are:</p>
+
+    <p>----> Conditional on the Condition/Treatment, read the following statements <----</p>
+
+    <p>----> ----> Condition/Treatment: Did not buy / Any condition <---- <----</p>
+
+    <p>You did not manage to buy a tourist package. For this reason, your earnings for this trading round are 0 ECU.</p>
+
+    <p>----> ----> Condition/Treatment: Bought/ Control & Regret <---- <----</p>
+
+    <p>You managed to buy a tourist package. For this reason your earnings for this negotiation round are [    ] ECU.</p>
+
+    <p>----> ----> Condition/Treatment: Bought / Informal & Formal sanction-NOT Reporting <---- <----</p>
+
+    <p>You managed to buy a tourist package. For this reason your earnings for this negotiation round are [    ] ECU.</p>
+
+    <p>----> ----> Condition/Treatment: Bought / Informal sanction- Reporting <---- <----</p>
+
+    <p>You managed to buy a tourist package. Additionally, a seller was reported by you and other buyers as using
+        commercial practices untruthfully. For this reason, he had to pay a fine of [ ] ECU. This is why your profits
+        for this round of negotiations are [    ] ECU.</p>
+
+    <p>----> ----> Condition/Treatment: Bought / (Formal sanction – Seller(s) Reported) <---- <----</p>
+
+    <p>You managed to buy a tourist package. In addition, after being audited, some seller was found to be using
+        commercial practices in a dishonest manner. For this reason, [ ] ECU in fine have been collected. This is why
+        your profits for this trading round are [    ] ECU.</p>
+
+
+
+
+
+
+    <p>----> End Conditional Text <----</p>
+
+    <p>Please click on the "Next" button to start a new negotiation round. For this negotiation round, both the packages
+        and the valuations will be chosen again at random.</p>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results of trading period
+{% endblock %}
+
+{% block content %}
+
+
+    <p>Your results for this trading round are:</p>
+
+    <p>----> Conditional on the Condition/Treatment, read the following statements <----</p>
+
+    <p>----> ----> Condition/Treatment: Did not sell/Any condition <---- <----</p>
+
+    <p>You didn't manage to sell your tourist package. For this reason, your profit for this trading round is 0 ECU.</p>
+
+    <p>----> ----> Condition/Treatment: Sold / Control & Regret <---- <----</p>
+
+    <p>You managed to sell your tourist package. For this reason your profits for this trading round are [ ] ECU.</p>
+
+    <p>----> ----> Condition/Treatment: Sold / informal & Formal sanction-NOT Reported <---- <----</p>
+
+    <p>You managed to sell your tourist package. For this reason your profits for this negotiation round are [ ] ECU.</p>
+
+    <p>----> ----> Condition/Treatment: Sold / Informal sanction- Reported <---- <----</p>
+
+    <p>You managed to sell your tourist package. Additionally, XXX buyers reported it. For this reason, you had to pay a
+        [ ] UME fine. This is why your profits for this round round are [ ] UME.</p>
+
+    <p>----> ----> Condition/Treatment: Sold / (Formal sanction - Reported) <---- <----</p>
+
+    <p>You managed to sell your tourist package. Additionally, after being audited, you were found to untruthfully use a
+        commercial practice. For this reason, you had to pay a [ ] ECU fine. This is why your profits for this
+        negotiation round are [ ] ECU.</p>
+
+    <p>----> End Conditional Text <----</p>
+
+    <p>Please click on the "Next" button to start a new negotiation round. For this negotiation round, both the packages
+        and the valuations will be chosen again at random.</p>
+
+<button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+
+{% endblock %}

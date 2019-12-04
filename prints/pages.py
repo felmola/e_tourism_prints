@@ -33,6 +33,15 @@ class p7_buyer_decision(Page):
 class p8_buyer_sanction(Page):
     pass
 
+class p9_seller_results(Page):
+    pass
+
+class p10_buyer_results(Page):
+    pass
+
+class p11_final_results(Page):
+    pass
 
 page_sequence = [p1_consent, p2_intro, p3_seller_intro, p4_seller_decision, p5_seller_list,
-                 p6_buyer_intro, p7_buyer_decision, p8_buyer_sanction]
+                 p6_buyer_intro, p7_buyer_decision, p8_buyer_sanction, p9_seller_results, p10_buyer_results,
+                 p11_final_results]
