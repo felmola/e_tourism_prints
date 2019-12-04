@@ -1,0 +1,83 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Decision of the seller
+{% endblock %}
+
+{% block content %}
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Seller ID</th>
+                <th scope="col">Package</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Rome</td>
+                <td>10 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Berlin</td>
+                <td>12 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Madrid</td>
+                <td>8 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Madrid</td>
+                <td>10 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Vienna</td>
+                <td>11 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Paris</td>
+                <td>13 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Vienna</td>
+                <td>9 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>Berlin</td>
+                <td>10 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <td>Berlin</td>
+                <td>8 ECU</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <td>Rome</td>
+                <td>7 ECU</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <p>If you wish to change the initial price to your package, please write the final price in the box below: </p>
+
+    <div class="form-inline"> {{ form.id_number }} &nbsp; ECU </div>
+
+    <br>
+
+    <p>Once you have set up the final price please click on the "Next" button</p>
+
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">Next</button>
+
+{% endblock %}
